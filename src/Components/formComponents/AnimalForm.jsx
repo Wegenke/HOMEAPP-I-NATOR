@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 
 const AnimalForm = () => {
+
   const { register, handleSubmit, reset } = useForm()
 
   async function submitData(data) {

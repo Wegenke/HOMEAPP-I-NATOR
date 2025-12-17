@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-export default function NavLinks(){
+const NavLinks = () => {
   return(
     <div id='navlinks'>
       <Link to='/'>HOME</Link><span>  </span>
@@ -12,3 +12,5 @@ export default function NavLinks(){
     </div>
   )
 }
+
+export default NavLinks

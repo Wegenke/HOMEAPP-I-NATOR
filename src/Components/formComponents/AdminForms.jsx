@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ChoreForm from './ChoreForm'
 import AnimalForm from './AnimalForm'
 import HumanForm from './HumanForm'
 import PlantForm from './PlantForm'
 
-
-export default function AdminForms() {
+const AdminForms = () => {
   const [currForm, setCurrForm] = useState('CHOOSE A FORM')
 
  const humanForm=(
@@ -36,3 +35,5 @@ export default function AdminForms() {
   )
 
 }
+
+export default AdminForms

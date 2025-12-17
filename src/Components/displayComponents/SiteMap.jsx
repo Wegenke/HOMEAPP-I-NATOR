@@ -1,6 +1,6 @@
 import NavLinks from "../navigation/NavLinks";
 
-export default function SiteMap(){
+const SiteMap = () => {
   return (
     <div id='sitemap'>
       <hr/>
@@ -9,3 +9,5 @@ export default function SiteMap(){
     </div>
   )
 }
+
+export default SiteMap

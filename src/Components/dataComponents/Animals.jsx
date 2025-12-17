@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 
-
-export default function Animals(){
+const Animals = () => {
   const [animalList, setAnimalList] = useState([])
 
   useEffect(() => {
@@ -18,3 +17,5 @@ export default function Animals(){
     </div>
   )
 }
+
+export default Animals

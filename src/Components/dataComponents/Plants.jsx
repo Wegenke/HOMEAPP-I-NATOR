@@ -1,8 +1,6 @@
 import {useState, useEffect} from 'react'
 
-
-
-export default function Plants(){
+const Plants = () => {
   const [plantsList, setPlantsList] = useState([])
 
   useEffect(() => {
@@ -19,3 +17,5 @@ export default function Plants(){
     </div>
   )
 }
+
+export default Plants

@@ -1,6 +1,6 @@
 import NavLinks from "../navigation/NavLinks";
 
-export default function NavBar(){
+const NavBar = () => {
   return(
     <div id="navbar">
       <NavLinks/>
@@ -9,3 +9,5 @@ export default function NavBar(){
     </div>
   )
 }
+
+export default NavBar

@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from 'react';
 
 const context = createContext(null);
 
-export default function AppProvider({ children }) {
+const AppProvider = ({ children }) => {
 
     const [enums, setEnums] = useState(null);
 
@@ -24,3 +24,5 @@ export default function AppProvider({ children }) {
 }
 
 AppProvider.context = context;
+
+export default AppProvider

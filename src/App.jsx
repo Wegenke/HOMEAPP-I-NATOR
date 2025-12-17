@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import AppProvider from './Components/contextComponents/AppContext';
 
 
-function App() {
+const  App = () => {
   return (
     <AppProvider>
       <NavBar/>

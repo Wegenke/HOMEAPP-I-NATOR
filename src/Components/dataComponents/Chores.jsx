@@ -1,8 +1,6 @@
 import {useState, useEffect} from 'react'
 
-
-
-export default function Chores(){
+const Chores = () => {
   const [choreList, setChoreList] = useState([])
 
   useEffect(() => {
@@ -19,3 +17,5 @@ export default function Chores(){
     </div>
   )
 }
+
+export default Chores

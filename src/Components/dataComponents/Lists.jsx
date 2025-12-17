@@ -1,8 +1,7 @@
-  import { useContext } from 'react'
-  import AppProvider from '../contextComponents/AppContext'
+import { useContext } from 'react'
+import AppProvider from '../contextComponents/AppContext'
 
-
-export default function Lists(){
+const Lists = () => {
   const enums = useContext(AppProvider.context);
 
   if (!enums) {
@@ -13,12 +12,11 @@ export default function Lists(){
     console.log("ListType not loaded or empty");
     return null;
   }
- 
-  
+
   return (
     <select>
       {enums.ListType.map((x) => (
-        <option key={x.id} value={x.id}>
+        <option key={x.item_value} value={x.item_value}>
           {x.item_display_text || x.item_name}
         </option>
       ))}
@@ -26,3 +24,5 @@ export default function Lists(){
   );
 
 }
+
+export default Lists

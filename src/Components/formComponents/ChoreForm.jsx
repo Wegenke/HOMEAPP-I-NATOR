@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 
-export default function ChoreForm() {
+const ChoreForm = () => {
+
   const { register, handleSubmit, reset } = useForm()
 
   async function submitData(data) {
@@ -38,3 +39,5 @@ export default function ChoreForm() {
     </div>
   )
 }
+
+export default ChoreForm

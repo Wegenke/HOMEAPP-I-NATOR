@@ -1,8 +1,6 @@
 import {useState, useEffect} from 'react'
 
-
-
-export default function Humans(){
+const Humans = () => {
   const [humanList, setHumanList] = useState([])
 
   useEffect(() => {
@@ -19,3 +17,5 @@ export default function Humans(){
     </div>
   )
 }
+
+export default Humans
