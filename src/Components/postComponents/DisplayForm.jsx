@@ -10,7 +10,7 @@ export default function DisplayForm({ currForm }) {
   const { register, handleSubmit, reset } = useForm()
 
   useEffect(() => {
-    fetch(`${URL}${PORT}get/human_ids`)
+    fetch(`${import.meta.env.VITE_API_URL}get/human_ids`)
       .then(res => res.json())
       .then(data => setHumans(data))
   }, [])
@@ -20,9 +20,9 @@ export default function DisplayForm({ currForm }) {
   async function onSubmit(data) {
     //Post URLs
     const postLinks = {
-      chores: `${URL}${PORT}post/add_chore`,
-      animals: `${URL}${PORT}post/add_animal`,
-      plants: `${URL}${PORT}post/add_plant`
+      chores: `${import.meta.env.VITE_API_URL}post/add_chore`,
+      animals: `${import.meta.env.VITE_API_URL}post/add_animal`,
+      plants: `${import.meta.env.VITE_API_URL}post/add_plant`
     }
     fetch(postLinks[currForm], {
       method: 'POST',

@@ -6,7 +6,7 @@ export default function Plants(){
   const [plantsList, setPlantsList] = useState([])
 
   useEffect(() => {
-    fetch(`${URL}${PORT}get/plants`)
+    fetch(`${import.meta.env.VITE_API_URL}get/plants`)
       .then(res => res.json())
       .then(data => setPlantsList(data))
   }, [])

@@ -5,7 +5,7 @@ export default function Animals(){
   const [animalList, setAnimalList] = useState([])
 
   useEffect(() => {
-    fetch(`${URL}${PORT}get/animals`)
+    fetch(`${import.meta.env.VITE_API_URL}get/animals`)
       .then(res => res.json())
       .then(data => setAnimalList(data))
   }, [])

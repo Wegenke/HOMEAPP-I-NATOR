@@ -5,7 +5,7 @@ import Animals from '../tableDataComponents/Animals'
 import Plants from '../tableDataComponents/Plants'
 import Chores from '../tableDataComponents/Chores'
 import Humans from '../tableDataComponents/Humans'
-import App from '../../App'
+import Home from '../displayComponents/Home'
 
 
 export default function RouterController(){
@@ -13,7 +13,7 @@ export default function RouterController(){
   const [humans, setHumans] = useState([])
 
     useEffect(() => {
-      fetch(`${URL}${PORT}get/human_ids`)
+      fetch(`${import.meta.env.VITE_API_URL}get/human_ids`)
         .then(res => res.json())
         .then(data => setHumans(data))
     }, [])
@@ -21,7 +21,7 @@ export default function RouterController(){
   return (
     <div id='routercontroller'>
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route path='/' element={<Home />} />
         <Route path='/admin-form' element={<AdminForm humanList={humans}/>} />
         <Route path='/all-chores' element={<Chores />}/>
         <Route path='/all-humans' element={<Humans />}/>

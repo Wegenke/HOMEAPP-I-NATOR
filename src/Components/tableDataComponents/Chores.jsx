@@ -6,7 +6,7 @@ export default function Chores(){
   const [choreList, setChoreList] = useState([])
 
   useEffect(() => {
-    fetch(`${URL}${PORT}get/chores`)
+    fetch(`${import.meta.env.VITE_API_URL}get/chores`)
       .then(res => res.json())
       .then(data => setChoreList(data))
   }, [])

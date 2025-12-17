@@ -6,7 +6,7 @@ export default function Humans(){
   const [humanList, setHumanList] = useState([])
 
   useEffect(() => {
-    fetch(`${URL}${PORT}get/humans`)
+    fetch(`${import.meta.env.VITE_API_URL}get/humans`)
       .then(res => res.json())
       .then(data => setHumanList(data))
   }, [])

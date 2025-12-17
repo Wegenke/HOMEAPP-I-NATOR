@@ -1,12 +1,15 @@
-import { useState } from 'react'
-import Home from './Components/displayComponents/Home'
+import NavBar from './Components/displayComponents/NavBar'
+import RouterController from './Components/navigation/RouterController'
+import SiteMap from './Components/displayComponents/SiteMap'
 
 function App() {
 
   return (
-    <div id='app'>
-      <Home />
-    </div>
+    <>
+      <NavBar/>
+      <RouterController />
+      <SiteMap/>
+    </>
   )
 }
 
