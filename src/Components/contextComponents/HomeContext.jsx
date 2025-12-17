@@ -7,3 +7,5 @@ export const PlantContext = createContext({plants:{}, setPlants: () => {}})
 export const AnimalContext = createContext({animals:{}, setAnimals: () => {}})
 
 export const ChoreContext = createContext({chores:{}, setChores: () => {}})
+
+export const ListContext = createContext({lists:{}, setLists: () => {}})

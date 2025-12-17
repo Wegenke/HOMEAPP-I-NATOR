@@ -1,11 +1,12 @@
 import {Routes, Route} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import AdminForm from '../postComponents/AdminForm'
-import Animals from '../tableDataComponents/Animals'
-import Plants from '../tableDataComponents/Plants'
-import Chores from '../tableDataComponents/Chores'
-import Humans from '../tableDataComponents/Humans'
+import Animals from '../dataComponents/Animals'
+import Plants from '../dataComponents/Plants'
+import Chores from '../dataComponents/Chores'
+import Humans from '../dataComponents/Humans'
 import Home from '../displayComponents/Home'
+import Lists from '../dataComponents/Lists'
 
 
 export default function RouterController(){
@@ -27,6 +28,7 @@ export default function RouterController(){
         <Route path='/all-humans' element={<Humans />}/>
         <Route path='/all-plants' element={<Plants />}/>
         <Route path='/all-animals' element={<Animals />}/>
+        <Route path='/lists' element={<Lists />} />
       </Routes>
     </div>
   )
