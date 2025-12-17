@@ -10,11 +10,11 @@ export default function Chores(){
       .then(res => res.json())
       .then(data => setChoreList(data))
   }, [])
-  
+
   return(
     <div>
       {choreList.map(x=>
-        <h2 key={x.id}>{`${x.chore_name} - ${x.chore_frequency} - ${x.completed} - ${x.responsible_party}`}</h2>
+        <h2 key={x.id}>{`${x.chore_name} - ${x.chore_value} - ${x.completed} - ${x.completed_by}`}</h2>
       )}
     </div>
   )

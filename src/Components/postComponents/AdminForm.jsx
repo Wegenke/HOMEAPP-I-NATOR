@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import DisplayForm from './DisplayForm'
 
+
 export default function AdminForm({humanList}) {
   const [currForm, setCurrForm] = useState('select')
   const choose = <h1>CHOOSE A FORM</h1>
@@ -23,8 +24,8 @@ export default function AdminForm({humanList}) {
       <button onClick={() =>setCurrForm('chores')}>Chores</button>
       <button onClick={() =>setCurrForm('plants')}>Plants</button>
       <button onClick={() => setCurrForm('animals')}>Animals</button>
-      <DisplayForm currForm={currForm} />     
+      <DisplayForm currForm={currForm} />
     </div>
-  ) 
-  
+  )
+
 }

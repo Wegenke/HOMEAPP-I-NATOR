@@ -48,32 +48,17 @@ export default function DisplayForm({ currForm }) {
     reset()
   }
 
-  //Multiple forms in same .jsx causes issues. 
+  //Multiple forms in same .jsx causes issues.
   const forms = {
     chores: (
-      <div id="adminforms">
-        <form id="choreForm" onSubmit={handleSubmit(showData)}>
+        <form id="choreForm" onSubmit={handleSubmit(onSubmit)}>
           Chore Name: <input {...register("chore_name", { required: true })} /><br />
-          How Often: <input {...register("chore_frequency", { required: true })} /><br />
-          Pick a kid: <br />
-          <select {...register("responsible_party", { required: true })}>
-            <option >Select One</option>
-            {humans.map(x => <option key={x.id} value={x.id}>{x.nick_name}</option>)}
-          </select><br />
-          <input type='submit' />
+          Chore Value: <input {...register("chore_value", { required: true })} /><br />
+          <input type="submit" />
         </form>
-      </div>
     ),
     plants: (
-      <div id="adminforms">
-      <form id="plantsForm" onSubmit={handleSubmit(showData)}>
-        Can I eat it? <input type='checkbox' {...register("edible")} /><br />
-        Plant Name: <input {...register("name", { required: true })} /><br />
-        Plant Location: <input {...register("location", { required: true })} /><br />
-        In a bucket? <input type='checkbox' {...register("bucket")} /><br />
-        <input type='submit' />
-      </form>
-    </div>
+      <h1>PLANTS HERE</h1>
     ),
     animals: (
       <h1>Animals from list</h1>
