@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom'
 import {useState, useEffect} from 'react'
-import AdminForm from '../postComponents/AdminForm'
+import AdminForms from '../formComponents/AdminForms'
 import Animals from '../dataComponents/Animals'
 import Plants from '../dataComponents/Plants'
 import Chores from '../dataComponents/Chores'
@@ -10,7 +10,7 @@ import Lists from '../dataComponents/Lists'
 
 
 export default function RouterController(){
-  
+
   const [humans, setHumans] = useState([])
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function RouterController(){
     <div id='routercontroller'>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/admin-form' element={<AdminForm humanList={humans}/>} />
+        <Route path='/admin-forms' element={<AdminForms humanList={humans}/>} />
         <Route path='/all-chores' element={<Chores />}/>
         <Route path='/all-humans' element={<Humans />}/>
         <Route path='/all-plants' element={<Plants />}/>
