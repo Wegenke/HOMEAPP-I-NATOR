@@ -1,8 +1,21 @@
+import { useState, useEffect } from "react"
 
 
-const ShowLists = () => {    
+const ShowLists = () => {
+    const [lists, setLists] = useState([])
+
+    useEffect(() => {
+        fetch(`${import.meta.env.VITE_API_URL}api/lists`)
+            .then(res => res.json())
+            .then(data => setLists(data))
+    }, [])
+
     return (
-        <div>View Lists Component Here</div>
+        <div>
+            {lists.map(x=>
+                <h2 key={x.id}>{`${x.name} - ${x.description}`}</h2>
+            )}
+        </div>
     )
 }
 

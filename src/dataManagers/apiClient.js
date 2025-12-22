@@ -17,13 +17,12 @@ const ApiClient = ({ primaryEndpoint }) => {
                 body: JSON.stringify(data)
             }).then(res => {
                 if (!res.ok) {
-                throw new Error(`Http error! status: ${res.status}`)
+                    throw new Error(`Http error! status: ${res.status}`)
                 }
             })
-            .then(() => reset())
                 .catch(err => {
                     console.error(`Error: ${err}`)
-            })
+                })
         }
         catch (error) {
             console.error("Error in create:", error);
@@ -39,19 +38,26 @@ const ApiClient = ({ primaryEndpoint }) => {
             body: JSON.stringify(data)
         }).then(res => {
             if (!res.ok) {
-            throw new Error(`Http error! status: ${res.status}`)
+                throw new Error(`Http error! status: ${res.status}`)
             }
         })
-        .then(() => reset())
-        .catch(err => {
-            console.error(`Error: ${err}`)
-            reset()
-        })
+            .catch(err => {
+                console.error(`Error: ${err}`)
+            })
     }
-    
+
+    let getEm = async () => {
+        fetch(`${import.meta.env.VITE_API_URL}api/lists`)
+            .then(res => res.json())
+            .catch(err => {
+                console.error(`Error: ${err}`)
+            })
+    }
+
     return {
         create: create,
         update: update,
+        getEm: getEm
     };
 
 }

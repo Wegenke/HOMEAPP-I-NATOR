@@ -5,7 +5,6 @@ const ChoreForm = () => {
   const { register, handleSubmit, reset } = useForm()
 
   async function submitData(data) {
-    console.log("blammo", data)
     fetch(`${import.meta.env.VITE_API_URL}post/add_chore`, {
       method: 'POST',
       headers: {

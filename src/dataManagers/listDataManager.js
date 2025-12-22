@@ -3,11 +3,11 @@ import ApiClient from "./apiClient";
 let listApiClient = ApiClient({ primaryEndpoint: 'lists'});
 const ListsDataManager = {
     getAllLists: async () => {
-        //todo
-        return [];
+        console.log("Grabbing lists");
+        return await listApiClient.getEm();
     },
     getListById: async (id) => {
-        //todo
+        console.log(id)
         return null;
     },
     createList: async (listData) => {

@@ -7,8 +7,8 @@ const NavLinks = () => {
       <Link to='/all-chores'>ALL CHORES</Link><span>  </span>
       <Link to='/all-humans'>ALL HUMANS</Link><span>  </span>
       <Link to='/all-plants'>ALL PLANTS</Link><span>  </span>
-      <Link to='/lists'>LISTS</Link><span>  </span>
       <Link to='/all-animals'>ALL ANIMALS</Link><span>  </span>
+      <Link to='/lists'>LISTS</Link><span>  </span>
     </div>
   )
 }
