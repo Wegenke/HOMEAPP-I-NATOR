@@ -5,7 +5,7 @@ import Plants from '../dataComponents/Plants'
 import Chores from '../dataComponents/Chores'
 import Humans from '../dataComponents/Humans'
 import Home from '../displayComponents/Home'
-import Lists from '../dataComponents/Lists'
+import Lists from '../dataComponents/Lists/Lists'
 
 
 const RouterController = () => {
